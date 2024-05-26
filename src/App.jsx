@@ -23,7 +23,7 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="*" element={<>Page Not Found</>} />
+        <Route path="*" element={<HomePage />} />
         <Route path="/report" element={<ReportOutage fetchOutages={fetchOutages} />} />
         {/* outagelist */}
         <Route path="/outages" element={<OutageList outages={outages} setOutages={setOutages} />} />
