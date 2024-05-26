@@ -1,17 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
-const OutageList = () => {
-    const [outages, setOutages] = useState([]);
-
+const OutageList = ({ outages, setOutages }) => {
     useEffect(() => {
         const fetchOutages = async () => {
-            const response = await fetch('http://localhost:3000/outages');
-            const data = await response.json();
-            setOutages(data);
+            try {
+                const response = await fetch('http://localhost:3000/outages');
+                const data = await response.json();
+                setOutages(data);
+            } catch (error) {
+                console.error('Error fetching outages:', error);
+            }
         };
 
         fetchOutages();
-    }, []);
+    }, [setOutages]);
 
     const styles = {
         container: {
@@ -44,6 +46,9 @@ const OutageList = () => {
             marginBottom: '5px',
             fontWeight: 'bold'
         },
+        listItemSubHeading: {
+            marginBottom: '5px',
+        },
         listItemText: {
             margin: '0'
         }
@@ -55,9 +60,10 @@ const OutageList = () => {
             <ul style={styles.list}>
                 {outages.map((outage) => (
                     <li key={outage.id} style={styles.listItem}>
-                        <h3 style={styles.listItemHeading}>{outage.location}</h3>
-                        <p style={styles.listItemText}>{outage.status}</p>
-                        {outage.latitude && outage.longitude && (
+                        <h3 style={styles.listItemHeading}>Location: {outage.location}</h3>
+                        <h4 style={styles.listItemSubHeading}>Reported By: {outage.name}</h4>
+                        <p style={styles.listItemText}>Status: {outage.status}</p>
+                        {outage.latitude !== undefined && outage.longitude !== undefined && (
                             <p style={styles.listItemText}>
                                 Coordinates: {outage.latitude}, {outage.longitude}
                             </p>

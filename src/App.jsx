@@ -26,7 +26,7 @@ const App = () => {
         <Route path="*" element={<>Page Not Found</>} />
         <Route path="/report" element={<ReportOutage fetchOutages={fetchOutages} />} />
         {/* outagelist */}
-        <Route path="/outages" element={<OutageList />} />
+        <Route path="/outages" element={<OutageList outages={outages} setOutages={setOutages} />} />
       </Routes>
     </BrowserRouter>
   )

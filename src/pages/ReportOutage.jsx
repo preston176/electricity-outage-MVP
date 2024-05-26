@@ -4,6 +4,8 @@ import Swal from 'sweetalert2'
 
 const ReportOutage = ({ fetchOutages }) => {
     const [location, setLocation] = useState('');
+    // user details
+    const [name, setName] = useState('');
     const [status, setStatus] = useState('No Power');
     const [coords, setCoords] = useState({ latitude: null, longitude: null });
     const navigate = useNavigate();
@@ -15,7 +17,7 @@ const ReportOutage = ({ fetchOutages }) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ location, status, ...coords })
+            body: JSON.stringify({ name, location, status, ...coords })
         });
 
         if (response.ok) {
@@ -78,7 +80,7 @@ const ReportOutage = ({ fetchOutages }) => {
         formContainer: {
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
+            alignItems: 'left',
             justifyContent: 'center',
             padding: '20px',
             margin: '10% auto',
@@ -86,7 +88,7 @@ const ReportOutage = ({ fetchOutages }) => {
             border: '1px solid #ccc',
             borderRadius: '10px',
             boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
-            backgroundColor: '#fff'
+            backgroundColor: '#'
         },
         input: {
             width: '100%',
@@ -101,7 +103,7 @@ const ReportOutage = ({ fetchOutages }) => {
             margin: '10px 0',
             borderRadius: '5px',
             border: 'none',
-            backgroundColor: '#007bff',
+            backgroundColor: '#388da8',
             color: '#fff',
             fontSize: '16px',
             cursor: 'pointer'
@@ -114,7 +116,27 @@ const ReportOutage = ({ fetchOutages }) => {
     };
 
     return (
+
         <form onSubmit={handleSubmit} style={styles.formContainer}>
+            <p style={{
+                color: "#3d4348"
+            }}>Please fill in the form below with your details</p>
+            <label style={{
+
+            }} htmlFor="name">
+                Your Name:
+            </label>
+            <input
+                type='text'
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder='Your Name'
+                required
+                style={styles.input}
+            />
+            <label htmlFor="location">
+                Location
+            </label>
             <input
                 type="text"
                 value={location}
@@ -127,7 +149,9 @@ const ReportOutage = ({ fetchOutages }) => {
             {coords.latitude && coords.longitude && (
                 <p style={styles.coordinates}>Coordinates: {coords.latitude}, {coords.longitude}</p>
             )}
-
+            <label htmlFor="status">
+                Status:
+            </label>
             <input
                 type="select"
                 value={status}

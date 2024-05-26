@@ -27,6 +27,14 @@
       "status": "No Power",
       "latitude": -1.277952,
       "longitude": 36.8214016
+    },
+    {
+      "id": "e6f4",
+      "name": "Preston",
+      "location": "kisii",
+      "status": "No Power",
+      "latitude": null,
+      "longitude": null
     }
   ],
   "comments": [
