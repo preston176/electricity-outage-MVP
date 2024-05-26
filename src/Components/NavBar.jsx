@@ -13,9 +13,9 @@ const NavBar = () => {
 
                 <nav id="navmenu" className="navmenu">
                     <ul>
-                        <li><a href="index.html#hero" className="">Home</a></li>
+                        <li><Link to={"/"} className="">Home</Link></li>
                         <li><Link to={"/outages"}>View Outages </Link></li>
-                        <li><a href="index.html#features">Features</a></li>
+                        {/* <li><a href="index.html#features">Features</a></li> */}
                         {/* <li><a href="index.html#services">Services</a></li>
                         <li><a href="index.html#pricing">Pricing</a></li>
                         <li className="dropdown"><a href="#"><span>Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -35,7 +35,7 @@ const NavBar = () => {
                                 <li><a href="#">Dropdown 4</a></li>
                             </ul>
                         </li> */}
-                        <li><a href="preston176.vercel.app/#contact">Contact</a></li>
+                        <li><a href="https://preston176.vercel.app/#contact" target="_blank">Contact</a></li>
                     </ul>
                     <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
