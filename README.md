@@ -40,7 +40,7 @@ npm start
 
 This will start both the JSON Server for the backend and the Vite development server for the frontend.
 
-1. Open your browser and go to [http://localhost:3000](http://localhost:3000) to view the application.
+1. Open your browser and go to [http://localhost:5173](http://localhost:5173) to view the application.
 
 ## Contributing
 
