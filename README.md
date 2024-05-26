@@ -33,9 +33,7 @@ This project is a basic web application built with React and Vite for reporting 
 ```npm install```
 
 4. Start the development server:
-```
-npm start
-```
+```npm start```
 
 
 This will start both the JSON Server for the backend and the Vite development server for the frontend.
