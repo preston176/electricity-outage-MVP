@@ -1,0 +1,57 @@
+{
+  "outages": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "3c3a",
+      "location": "Nairobi",
+      "status": "No Power",
+      "latitude": -1.277952,
+      "longitude": 36.8214016
+    },
+    {
+      "id": "0341",
+      "location": "Nairobi",
+      "status": "No Power",
+      "latitude": -1.277952,
+      "longitude": 36.8214016
+    },
+    {
+      "id": "79a7",
+      "location": "Nairobi",
+      "status": "",
+      "latitude": -1.277952,
+      "longitude": 36.8214016
+    },
+    {
+      "id": "3233",
+      "location": "Nairobi",
+      "status": "No Power",
+      "latitude": -1.277952,
+      "longitude": 36.8214016
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
