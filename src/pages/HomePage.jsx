@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../css/main.css"
 
 const HomePage = () => {
@@ -15,7 +16,7 @@ const HomePage = () => {
                             <h1 data-aos="fade-up" className="">Welcome to <span>PowerWatch</span></h1>
                             <p data-aos="fade-up" data-aos-delay="100" className="">Click on {"Get Started"} to begin<br /></p>
                             <div className="d-flex" data-aos="fade-up" data-aos-delay="200">
-                                <a href="#about" className="btn-get-started">Get Started</a>
+                                <Link to="/report" className="btn-get-started">Get Started</Link>
                                 <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" className="glightbox btn-watch-video d-flex align-items-center"><i className="bi bi-play-circle"></i><span>Watch Video</span></a>
                             </div>
                             <img src="/img/hero-services-img.webp" className="img-fluid hero-img" alt="" data-aos="zoom-out" data-aos-delay="300" />
@@ -33,7 +34,7 @@ const HomePage = () => {
                                 <div className="service-item d-flex">
                                     <div className="icon flex-shrink-0"><i className="bi bi-briefcase"></i></div>
                                     <div>
-                                        <h4 className="title"><a href="#" className="stretched-link">Report an Outage</a></h4>
+                                        <h4 className="title"><Link to="/report" className="stretched-link">Report an Outage</Link></h4>
                                         <p className="description">Easily report power outages in your area and help us quickly address the issue.</p>
                                     </div>
                                 </div>
@@ -43,7 +44,7 @@ const HomePage = () => {
                                 <div className="service-item d-flex">
                                     <div className="icon flex-shrink-0"><i className="bi bi-card-checklist"></i></div>
                                     <div>
-                                        <h4 className="title"><a href="#" className="stretched-link">Track Outages</a></h4>
+                                        <h4 className="title"><Link to="/outages" className="stretched-link">Track Outages</Link></h4>
                                         <p className="description">Stay updated with real-time information about ongoing outages and their status.</p>
                                     </div>
                                 </div>
@@ -53,7 +54,7 @@ const HomePage = () => {
                                 <div className="service-item d-flex">
                                     <div className="icon flex-shrink-0"><i className="bi bi-bar-chart"></i></div>
                                     <div>
-                                        <h4 className="title"><a href="#" className="stretched-link">Analyze Trends</a></h4>
+                                        <h4 className="title"><Link to="/outages" className="stretched-link">Analyze Trends</Link></h4>
                                         <p className="description">Access detailed reports and analytics on outage patterns and response times.</p>
                                     </div>
                                 </div>
