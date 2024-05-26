@@ -3,7 +3,6 @@
 ## Description
 
 This project is a basic web application built with React and Vite for reporting electricity outages. Users can report an outage by providing the location, status, and optionally, the live location. Reported outages are displayed in a list format.
-
 ## Features
 
 - Report electricity outages with location and status.

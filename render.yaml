@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: electricity-outage-json-server
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npx json-server --watch db.json --port 3000"
+    repo: https://github.com/preston176/electricity-outage-mvp
+    branch: main
+    healthCheckPath: /db
