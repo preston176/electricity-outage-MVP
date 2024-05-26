@@ -26,7 +26,7 @@ This project is a basic web application built with React and Vite for reporting 
 
 1. Clone the repository:
 
-```git clone https://github.com/your-username/electricity-outage-mvp.git```
+```git clone https://github.com/preston176/electricity-outage-mvp.git```
 
 2. Navigate to the project directory:
 3. Install dependencies:
