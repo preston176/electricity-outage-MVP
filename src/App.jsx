@@ -4,6 +4,7 @@ import ReportOutage from "./pages/ReportOutage"
 import NavBar from "./Components/NavBar"
 import { useEffect } from "react"
 import { useState } from "react"
+import OutageList from "./pages/OutageList"
 const App = () => {
 
   const [outages, setOutages] = useState([]);
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="*" element={<>Page Not Found</>} />
         <Route path="/report" element={<ReportOutage fetchOutages={fetchOutages} />} />
         {/* outagelist */}
+        <Route path="/outages" element={<OutageList />} />
       </Routes>
     </BrowserRouter>
   )
