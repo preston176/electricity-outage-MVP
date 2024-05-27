@@ -9,14 +9,18 @@ const App = () => {
 
   const [outages, setOutages] = useState([]);
 
+  const API_URL = '/api'
+
+
   const fetchOutages = async () => {
-    const response = await fetch('http://localhost:3000/outages');
+    const response = await fetch(`$${API_URL}/outages`);
     const data = await response.json();
     setOutages(data);
   };
 
   useEffect(() => {
     fetchOutages();
+
   }, []);
   return (
     <BrowserRouter>
