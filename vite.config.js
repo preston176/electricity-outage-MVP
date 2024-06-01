@@ -10,12 +10,7 @@ export default defineConfig({
     }
   },
   server: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3000',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
+    host: '0.0.0.0',
+    port: process.env.PORT || 3000 // Default to port 3000 or use the port specified by the environment variable
   }
 });
