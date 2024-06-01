@@ -9,7 +9,7 @@ const App = () => {
 
   const [outages, setOutages] = useState([]);
 
-  const API_URL = '/api'
+  const API_URL = 'http://localhost:3000' || 'https://electricity-outage-mvp-server.onrender.com'
 
 
   const fetchOutages = async () => {
