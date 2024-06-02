@@ -15,6 +15,7 @@ const NavBar = () => {
                     <ul>
                         <li><Link to={"/"} className="">Home</Link></li>
                         <li><Link to={"/outages"}>View Outages </Link></li>
+                        <li><Link to={"/about"}>About Us </Link></li>
                         {/* <li><a href="index.html#features">Features</a></li> */}
                         {/* <li><a href="index.html#services">Services</a></li>
                         <li><a href="index.html#pricing">Pricing</a></li>

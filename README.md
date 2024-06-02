@@ -21,6 +21,10 @@ This project is a basic web application built with React and Vite for reporting 
 - React Router DOM
 - SweetAlert2
 
+## Demo (Screenshot)
+
+![Landing Page](image.png)
+
 ## Getting Started
 
 1. Clone the repository:
