@@ -14,7 +14,7 @@ const App = () => {
   // 'http://localhost:3000'
 
   const fetchOutages = async () => {
-    const response = await fetch(`$${API_URL}/outages`);
+    const response = await fetch(`${API_URL}/outages`);
     const data = await response.json();
     setOutages(data);
   };
