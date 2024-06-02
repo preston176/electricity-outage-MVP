@@ -6,9 +6,10 @@
   font-family: Arial, sans-serif;
 }
 
-.about-container h1 {
-  text-align: center;
+.about-container h1,
+.about-container h2 {
   color: #333;
+  text-align: center;
 }
 
 .about-section {
@@ -17,8 +18,29 @@
 
 .about-section h2 {
   color: #007bff;
+  text-align: left;
 }
 
-.about-section p {
+.about-section p,
+.about-section ul {
   color: #555;
+  text-align: left;
+}
+
+.about-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-section ul li {
+  margin-bottom: 10px;
+}
+
+.about-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.about-section a:hover {
+  text-decoration: underline;
 }
