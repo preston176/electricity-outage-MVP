@@ -5,6 +5,7 @@ import NavBar from "./Components/NavBar"
 import { useEffect } from "react"
 import { useState } from "react"
 import OutageList from "./pages/OutageList"
+import AboutUs from "./pages/AboutUs"
 const App = () => {
 
   const [outages, setOutages] = useState([]);
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/report" element={<ReportOutage fetchOutages={fetchOutages} />} />
         {/* outagelist */}
         <Route path="/outages" element={<OutageList outages={outages} setOutages={setOutages} />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
   )
