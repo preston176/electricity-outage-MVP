@@ -10,9 +10,11 @@ const ReportOutage = ({ fetchOutages }) => {
     const [coords, setCoords] = useState({ latitude: null, longitude: null });
     const navigate = useNavigate();
 
+    const API_URL = 'https://electricity-outage-mvp-server.onrender.com'
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch('http://localhost:3000/outages', {
+        const response = await fetch(`${API_URL}/outages`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
