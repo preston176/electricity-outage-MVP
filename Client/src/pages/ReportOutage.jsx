@@ -4,13 +4,12 @@ import Swal from 'sweetalert2'
 
 const ReportOutage = ({ fetchOutages }) => {
     const [location, setLocation] = useState('');
-    // user details
     const [name, setName] = useState('');
     const [status, setStatus] = useState('No Power');
     const [coords, setCoords] = useState({ latitude: null, longitude: null });
     const navigate = useNavigate();
 
-    const API_URL = 'https://electricity-outage-mvp-server.onrender.com'
+    const API_URL = 'http://localhost:5000'; //  backend server URL
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -33,10 +32,8 @@ const ReportOutage = ({ fetchOutages }) => {
                 text: "You clicked the button!",
                 icon: "success"
             });
-            // on success redirect to home page
-            navigate("/")
+            navigate("/");
         }
-
     };
 
     const fetchLiveLocation = () => {
@@ -118,16 +115,9 @@ const ReportOutage = ({ fetchOutages }) => {
     };
 
     return (
-
         <form onSubmit={handleSubmit} style={styles.formContainer}>
-            <p style={{
-                color: "#3d4348"
-            }}>Please fill in the form below with your details</p>
-            <label style={{
-
-            }} htmlFor="name">
-                Your Name:
-            </label>
+            <p style={{ color: "#3d4348" }}>Please fill in the form below with your details</p>
+            <label htmlFor="name">Your Name:</label>
             <input
                 type='text'
                 value={name}
@@ -136,9 +126,7 @@ const ReportOutage = ({ fetchOutages }) => {
                 required
                 style={styles.input}
             />
-            <label htmlFor="location">
-                Location
-            </label>
+            <label htmlFor="location">Location</label>
             <input
                 type="text"
                 value={location}
@@ -151,9 +139,7 @@ const ReportOutage = ({ fetchOutages }) => {
             {coords.latitude && coords.longitude && (
                 <p style={styles.coordinates}>Coordinates: {coords.latitude}, {coords.longitude}</p>
             )}
-            <label htmlFor="status">
-                Status:
-            </label>
+            <label htmlFor="status">Status:</label>
             <input
                 type="select"
                 value={status}

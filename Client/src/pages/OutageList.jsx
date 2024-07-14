@@ -4,7 +4,7 @@ const OutageList = ({ outages, setOutages }) => {
     useEffect(() => {
         const fetchOutages = async () => {
             try {
-                const response = await fetch('http://localhost:3000/outages');
+                const response = await fetch('http://localhost:5000/outages');
                 const data = await response.json();
                 setOutages(data);
             } catch (error) {
