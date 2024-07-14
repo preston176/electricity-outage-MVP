@@ -9,7 +9,8 @@ const ReportOutage = ({ fetchOutages }) => {
     const [coords, setCoords] = useState({ latitude: null, longitude: null });
     const navigate = useNavigate();
 
-    const API_URL = 'http://localhost:5000'; //  backend server URL
+    const API_URL = 'https://powerwatch-backend-production.onrender.com'; //  backend server URL
+    // replace with 'http://localhost:5000' for localhost
 
     const handleSubmit = async (e) => {
         e.preventDefault();

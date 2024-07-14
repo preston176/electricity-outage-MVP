@@ -10,9 +10,9 @@ const App = () => {
 
   const [outages, setOutages] = useState([]);
 
-  const API_URL = 'http://localhost:5000'
+  const API_URL = 'https://powerwatch-backend-production.onrender.com'
 
-  // 'http://localhost:3000'
+  // replace with 'http://localhost:5000' for localhost
 
   const fetchOutages = async () => {
     const response = await fetch(`${API_URL}/outages`);
