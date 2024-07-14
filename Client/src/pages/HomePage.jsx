@@ -17,7 +17,7 @@ const HomePage = () => {
                             <p data-aos="fade-up" data-aos-delay="100" className="">Click on {"Get Started"} to begin<br /></p>
                             <div className="d-flex" data-aos="fade-up" data-aos-delay="200">
                                 <Link to="/report" className="btn-get-started">Get Started</Link>
-                                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" className="glightbox btn-watch-video d-flex align-items-center"><i className="bi bi-play-circle"></i><span>Watch Video</span></a>
+                                <a href="#" className="glightbox btn-watch-video d-flex align-items-center"><i className="bi bi-play-circle"></i><span>Watch Video</span></a>
                             </div>
                             <img src="/img/hero-services-img.webp" className="img-fluid hero-img" alt="" data-aos="zoom-out" data-aos-delay="300" />
                         </div>
